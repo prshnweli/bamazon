@@ -46,6 +46,8 @@ inquirer.prompt([
     var diff = stock - parseInt(user.quantity);
     console.log(diff);
 
+    var cost = parseInt(user.quantity) * parseFloat(res[item].price)
+
     if(user.quantity > stock){
       console.log("Insufficient quantity")
     } else {
@@ -61,6 +63,7 @@ inquirer.prompt([
         ]
 
         );
+      console.log("Total price: $" + cost);
     }
     connection.end();
   });
