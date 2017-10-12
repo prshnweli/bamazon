@@ -41,10 +41,10 @@ inquirer.prompt([
 
     var item = parseInt(user.item_ID) - 1;
     var stock = res[item].stock_quantity;
-    console.log(stock);
+    //console.log(stock);
 
     var diff = stock - parseInt(user.quantity);
-    console.log(diff);
+    //console.log(diff);
 
     var cost = parseInt(user.quantity) * parseFloat(res[item].price)
 
